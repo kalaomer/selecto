@@ -1,7 +1,6 @@
 # Selecto
----
 
-Selecto is a custom select element for select.
+[Selecto](http://kalaomer.github.io/selecto) is a custom select element for select.
 
 Exmaple
 ```
@@ -18,7 +17,6 @@ Exmaple
 This is a way for convert select to Selecto.
 
 # Last
-----
 Browser tests are not completed. But we will!
 
 Please contact me kalaomer@hotmail.com
