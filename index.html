@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Selecto</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="./build/css/selecto.css">
+	<script src="./build/selecto.js"></script>
+
+	<style>
+
+		.example-area {
+			width: 600px;
+			padding: 100px;
+		}
+
+		.action-area > div {
+			float: left;
+		}
+
+		.action-time {
+			width: 100px;
+		}
+
+		.action-day {
+			width: 200px;
+		}
+
+	</style>
+
+	<script>
+		$(function() {
+			$('.selecto, .action-time').Selecto();
+		});
+	</script>
+</head>
+<body>
+	<div class="example-area" style="width: 300px;">
+		<select class="selecto" name="" id="" placeholder="Hangisi">
+			<option value="">Lorem.</option>
+			<option value="">Nostrum.</option>
+			<option value="">Autem?</option>
+			<option value="">Numquam.</option>
+			<option value="">Quaerat!</option>
+		</select>
+	</div>
+
+	<div class="example-area action-area">
+		<select name="" id="" class="selecto action-day" placeholder="Bugün">
+			<option value="0" selected="selecter">Bugün</option>
+			<option value="1">Yarın</option>
+		</select>
+		<select name="action_hour" class="selecto action-time" placeholder="00">
+				<option value="00">00</option>
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+			    <option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+		</select>
+		<select id="demo" name="action_minute" class="action-time" placeholder="00">
+        		<option value="00">00</option>
+				<option value="05">05</option>
+				<option value="10">10</option>
+				<option value="15">15</option>
+				<option value="20">20</option>
+				<option value="25">25</option>
+				<option value="30">30</option>
+				<option value="35">35</option>
+				<option value="40">40</option>
+				<option value="45">45</option>
+				<option value="50">50</option>
+				<option value="55">55</option>
+		</select>
+	</div>
+</body>
+</html>

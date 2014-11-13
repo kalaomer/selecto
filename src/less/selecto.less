@@ -1,0 +1,131 @@
+@font-face {
+	font-family: "Raleway";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Raleway"), url("http://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/raleway/v9/IczWvq5y_Cwwv_rBjOtT0w.woff") format("woff");
+}
+
+.selecto {
+
+	position: relative;
+
+	padding: 0;
+
+	height: auto;
+
+	font-family: "Raleway";
+	font-size: 22px;
+	color: #fefefe;
+
+	background: #333;
+
+	select {
+		display: none;
+		visibility: hidden;
+	}
+
+	&, & * {
+		box-sizing: border-box;
+	}
+
+	.selecto-place-holder {
+		display: block;
+		position: relative;
+		transition: all .2s;
+		padding: 15px;
+
+		&::after {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 15px;
+			content: "";
+
+			display: inline-block;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			font-size-adjust: none;
+			font-stretch: normal;
+			font-feature-settings: normal;
+			font-language-override: normal;
+			font-kerning: auto;
+			font-synthesis: weight style;
+			font-variant: normal;
+			font-size: inherit;
+			text-rendering: auto;
+		}
+
+		&:hover::after {
+			color: #999;
+		}
+
+		&:hover {
+			color: #999;
+			cursor: pointer;
+		}
+	}
+
+	.selecto-select-list {
+		z-index: 9999;
+
+		visibility: hidden;
+		opacity: 0;
+
+		transition: all .3s;
+
+		position: absolute;
+		left: 50%;
+		top: 50;
+		transform: translate3d(-50%, -50%, 0px);
+
+		background: #222;
+
+		width: 100%;
+		max-height: 400%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding: 1em 0;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: outside none none;
+
+			li {
+				margin: 0;
+				padding: .5em 1em;
+
+				cursor: pointer;
+				transition: all .3s;
+
+				transform: translate3d(30%, 0px, 0px);
+				transition: all 0.3s ease 0s;
+
+				&:hover {
+					color: #999;
+					background: #333;
+				}
+			}
+		}
+	}
+}
+
+.selecto-active {
+	.selecto-place-holder {
+		text-indent: -50px;
+		opacity: 0;
+	}
+
+	.selecto-select-list {
+		visibility: visible;
+		opacity: 1;
+
+		ul {
+			li {
+				transform: translate3d(0px, 0px, 0px);
+			}
+		}
+	}
+}
