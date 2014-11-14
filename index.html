@@ -12,6 +12,17 @@
 
 	<style>
 
+		@font-face {
+			font-family: "Raleway";
+			font-style: normal;
+			font-weight: 400;
+			src: local("Raleway"), url("http://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/raleway/v9/IczWvq5y_Cwwv_rBjOtT0w.woff") format("woff");
+		}
+
+		* {
+			font-family: "Raleway";
+		}
+
 		.example-area {
 			width: 600px;
 			padding: 100px;
@@ -39,7 +50,7 @@
 </head>
 <body>
 	<div class="example-area" style="width: 300px;">
-		<select class="selecto" name="" id="" placeholder="Hangisi">
+		<select class="selecto selecto-theme-dark" name="" id="" placeholder="Hangisi">
 			<option value="">Lorem.</option>
 			<option value="">Nostrum.</option>
 			<option value="">Autem?</option>
@@ -79,7 +90,7 @@
 				<option value="22">22</option>
 				<option value="23">23</option>
 		</select>
-		<select id="demo" name="action_minute" class="action-time" placeholder="00">
+		<select id="demo" name="action_minute" class="action-time selecto selecto-theme-dark" placeholder="00">
         		<option value="00">00</option>
 				<option value="05">05</option>
 				<option value="10">10</option>
