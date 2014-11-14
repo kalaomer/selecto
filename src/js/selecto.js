@@ -19,7 +19,7 @@
 		this.ele = content;
 
 		// Set Place Holder Text
-		this.placeHolder().text(this.selectSource().attr('placeholder'));
+		this.placeHolder().text(this.defaultPlaceHolderText());
 
 		this.setEvents();
 	};
@@ -47,6 +47,14 @@
 	Selecto.prototype.close = function ()
 	{
 		this.ele.removeClass('selecto-active');
+	};
+
+	Selecto.prototype.defaultPlaceHolderText = function()
+	{
+		var placeHolderText = this.selectSource().attr('placeholder');
+		var firstListItemText = this.selectList().find('li').first().text();
+
+		return placeHolderText || firstListItemText;
 	};
 
 	Selecto.prototype.select = function(index)
