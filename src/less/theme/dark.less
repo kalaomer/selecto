@@ -1,0 +1,44 @@
+
+.selecto-theme-dark {
+
+	font-size: 22px;
+	color: #fefefe;
+
+	background: #333;
+
+	.selecto-place-holder {
+
+		&::after {
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			font-size-adjust: none;
+			font-stretch: normal;
+			font-feature-settings: normal;
+			font-language-override: normal;
+			font-kerning: auto;
+			font-synthesis: weight style;
+			font-variant: normal;
+			font-size: inherit;
+			text-rendering: auto;
+		}
+
+		&:hover, &:hover::after {
+			background: #666;
+		}
+	}
+
+	.selecto-select-list {
+
+		background: #222;
+
+		ul {
+			li {
+				color: #eee;
+				&:hover {
+					background: #333;
+				}
+			}
+		}
+	}
+}

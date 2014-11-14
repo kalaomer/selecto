@@ -1,11 +1,6 @@
-@font-face {
-	font-family: "Raleway";
-	font-style: normal;
-	font-weight: 400;
-	src: local("Raleway"), url("http://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/raleway/v9/IczWvq5y_Cwwv_rBjOtT0w.woff") format("woff");
-}
-
 .selecto {
+
+	@background: #eee;
 
 	position: relative;
 
@@ -13,11 +8,10 @@
 
 	height: auto;
 
-	font-family: "Raleway";
 	font-size: 22px;
-	color: #fefefe;
+	color: #333;
 
-	background: #333;
+	background: @background;
 
 	select {
 		display: none;
@@ -57,12 +51,8 @@
 			text-rendering: auto;
 		}
 
-		&:hover::after {
-			color: #999;
-		}
-
-		&:hover {
-			color: #999;
+		&:hover, &:hover::after {
+			background: #ddd;
 			cursor: pointer;
 		}
 	}
@@ -80,7 +70,7 @@
 		top: 50;
 		transform: translate3d(-50%, -50%, 0px);
 
-		background: #222;
+		background: @background;
 
 		width: 100%;
 		max-height: 400%;
@@ -103,9 +93,10 @@
 				transform: translate3d(30%, 0px, 0px);
 				transition: all 0.3s ease 0s;
 
+				color: #333;
+
 				&:hover {
-					color: #999;
-					background: #333;
+					background: #ccc;
 				}
 			}
 		}
@@ -129,3 +120,6 @@
 		}
 	}
 }
+
+// Add themes last because of dominance.
+@import url(./theme/theme.less);
