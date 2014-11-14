@@ -79,7 +79,7 @@
 				_selecto.select($(this).index());
 			});
 
-		$(document).mouseup(function (e)
+		$(document).click(function (e)
 		{
 			var container = _selecto.ele;
 
